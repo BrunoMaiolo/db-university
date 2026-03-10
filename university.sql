@@ -37,3 +37,11 @@ CREATE TABLE insegnanti (
     email VARCHAR(100) UNIQUE,
     PRIMARY KEY (id)
 );
+--corsi insegnanti
+CREATE TABLE corso_insegnante (
+    corso_id INT,
+    insegnante_id INT,
+    PRIMARY KEY (corso_id, insegnante_id),
+    FOREIGN KEY (corso_id) REFERENCES corsi(id),
+    FOREIGN KEY (insegnante_id) REFERENCES insegnanti(id)
+);
