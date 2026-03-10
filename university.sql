@@ -18,3 +18,13 @@ CREATE TABLE corsi_di_laurea (
     FOREIGN KEY (dipartimento_id) REFERENCES dipartimenti(id)
 );
 
+-- corsi
+CREATE TABLE corsi (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    cfu INT,
+    anno INT,
+    corso_di_laurea_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (corso_di_laurea_id) REFERENCES corsi_di_laurea(id)
+);
