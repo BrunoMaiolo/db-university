@@ -56,3 +56,14 @@ CREATE TABLE studenti (
     PRIMARY KEY (id),
     FOREIGN KEY (corso_di_laurea_id) REFERENCES corsi_di_laurea(id)
 );
+
+-- esami
+CREATE TABLE esami (
+    id INT AUTO_INCREMENT,
+    data DATE,
+    aula VARCHAR(20),
+    corso_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (corso_id) REFERENCES corsi(id)
+);
+
