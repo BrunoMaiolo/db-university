@@ -9,3 +9,12 @@ CREATE TABLE dipartimenti (
     PRIMARY KEY (id)
 );
 
+-- corsi di laurea
+CREATE TABLE corsi_di_laurea (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    dipartimento_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (dipartimento_id) REFERENCES dipartimenti(id)
+);
+
