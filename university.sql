@@ -28,3 +28,12 @@ CREATE TABLE corsi (
     PRIMARY KEY (id),
     FOREIGN KEY (corso_di_laurea_id) REFERENCES corsi_di_laurea(id)
 );
+
+-- insegnanti
+CREATE TABLE insegnanti (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    cognome VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    PRIMARY KEY (id)
+);
