@@ -45,3 +45,14 @@ CREATE TABLE corso_insegnante (
     FOREIGN KEY (corso_id) REFERENCES corsi(id),
     FOREIGN KEY (insegnante_id) REFERENCES insegnanti(id)
 );
+
+-- studenti
+CREATE TABLE studenti (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    cognome VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    corso_di_laurea_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (corso_di_laurea_id) REFERENCES corsi_di_laurea(id)
+);
