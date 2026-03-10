@@ -67,3 +67,13 @@ CREATE TABLE esami (
     FOREIGN KEY (corso_id) REFERENCES corsi(id)
 );
 
+-- iscrizioni agli esami
+CREATE TABLE iscrizioni_esami (
+    id INT AUTO_INCREMENT,
+    studente_id INT,
+    esame_id INT,
+    voto INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (studente_id) REFERENCES studenti(id),
+    FOREIGN KEY (esame_id) REFERENCES esami(id)
+);
