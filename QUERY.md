@@ -13,3 +13,11 @@ SELECT *
 FROM courses
 WHERE cfu > 10;
 ```
+
+3 Studenti con piu di 30 anni:
+
+```sql
+SELECT *
+FROM students
+WHERE timestampdiff(year, date_of_birth, CURDATE()) > 30;
+```
