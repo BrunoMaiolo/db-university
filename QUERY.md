@@ -21,3 +21,12 @@ SELECT *
 FROM students
 WHERE timestampdiff(year, date_of_birth, CURDATE()) > 30;
 ```
+
+4 Corsi del primo semestre del primo anno:
+
+```sql
+SELECT *
+FROM courses
+WHERE period = 'I semestre'
+AND year = 1;
+```
