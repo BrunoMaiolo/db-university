@@ -54,3 +54,11 @@ WHERE level = 'magistrale';
 SELECT COUNT(*)
 FROM departments;
 ```
+
+8 Insegnanti senza numero di telefono:
+
+```sql
+SELECT COUNT(*)
+FROM teachers
+WHERE phone IS NULL;
+```
