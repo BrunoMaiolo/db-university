@@ -47,3 +47,10 @@ SELECT *
 FROM degrees
 WHERE level = 'magistrale';
 ```
+
+7 Numero di dipartimenti:
+
+```sql
+SELECT COUNT(*)
+FROM departments;
+```
