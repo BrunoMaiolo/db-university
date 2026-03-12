@@ -12,3 +12,10 @@ GROUP BY office_address;
 SELECT exam_id, AVG(vote) AS average_vote
 FROM exam_student
 GROUP BY exam_id;
+
+--4 CONTARE QUANTI CORSI DI LAUREA CI SONO PER OGNI DIPARTIMENTO--
+SELECT departments.name, COUNT(degrees.id) AS degrees_number
+FROM departments
+JOIN degrees
+ON departments.id = degrees.department_id
+GROUP BY departments.name;
